@@ -36,12 +36,18 @@ tasksList.addEventListener('click', (e) => {
     if (e.target.classList.value === "fas fa-trash") {
         elementparent.remove()
     }
-    console.log(e.target.parentElement.parentElement.querySelector('p'))
 
     if (e.target.classList.value === "fas fa-pen") {
         const newedit = prompt("Inserte su modificacion");
-        console.log(newedit)
         e.target.parentElement.parentElement.querySelector('p').innerText = newedit
     }
+    if (e.target.classList.value === "far fa-circle") {
+        e.target.classList.value = "fas fa-circle";
+    }else if (e.target.classList.value === "fas fa-circle") {
+        e.target.classList.value = "far fa-circle";
+    }
+
+    //for debugging
+    //console.log(e.target.classList)
 })
 
